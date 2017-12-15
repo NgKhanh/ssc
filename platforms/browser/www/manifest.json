@@ -1,0 +1,17 @@
+{
+  "background_color": "#FFF",
+  "display": "standalone",
+  "name": "simsiangchoon",
+  "short_name": "simsiangchoon",
+  "version": "simsiangchoon.app",
+  "description": "Founded in 1986, Sim Siang Choon Hardware Pte Ltd is today one of the leading specialist retailers of bathroom,\n        kitchen and home-improvement products in Singapore. Over the years, the company has grown into a major retailer\n        and distributor, holding a portfolio of exclusive distributorship in bathroom and kitchen products numbering 42\n        brands.",
+  "author": "PhoneGap Team",
+  "icons": [
+    {
+      "src": "resources/android/icon/drawable-xhdpi-icon.png",
+      "type": "image/png",
+      "sizes": "undefinedxundefined"
+    }
+  ],
+  "start_url": "index.html"
+}

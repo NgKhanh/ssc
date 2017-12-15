@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html class="with-statusbar-overlay">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>F7 Contacts MVC</title>
+    <link rel="stylesheet" href="lib/css/framework7.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/framework7.ios.min.css">
+    <link rel="stylesheet" href="css/framework7.ios.colors.min.css">
+    <link rel="stylesheet" href="css/app.css">
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCPiWVZBm_E9fqTGnkJHXeFv66DRtZjsYc"></script>
+</head>
+<body>
+<!-- Status bar overlay for fullscreen mode-->
+<div class="statusbar-overlay"></div>
+<!-- Panels overlay-->
+<div class="panel-overlay"></div>
+<!-- Left panel with reveal effect-->
+<div class="panel panel-left panel-cover">
+    <div class="view navbar-fixed">
+        <div class="pages">
+            <div data-page="panel-left" class="page" id="panel-left-template">
+                <div class="navbar">
+                    <div class="navbar-inner">
+                        <div id="welcome-wrap">Welcome to Sim Siang Choon</div>
+                    </div>
+                </div>
+                <div class="page-content">
+                    <div class="list-block no-margin-top">
+                        <ul id="section-welcome" class="profile-link-wrap">
+
+                        </ul>
+                        <ul id="section-nav-normal">
+                            <li><a href="#" class="item-link close-panel return-home">
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title">Home</div>
+                                    </div>
+                                </div>
+                            </a></li>
+                            <li>
+                                <a href="notification-public.html" class="item-link close-panel">
+                                    <div class="item-content">
+                                        <div class="item-inner">
+                                            <div class="item-title numb-notif-wrap">Notifications <span class="numb-notif-outer"><span class="numb-notif">{{numbNotficaitonUnread}}</span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li><a href="aboutus.html" class="item-link close-panel">
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title">About Us</div>
+                                    </div>
+                                </div>
+                            </a></li>
+                            <li><a href="ecatalogue.html" class="item-link close-panel">
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title">E-Catalogue</div>
+                                    </div>
+                                </div>
+                            </a></li>
+                            <li><a href="promotion.html" class="item-link close-panel">
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title">Promotions</div>
+                                    </div>
+                                </div>
+                            </a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="findus.html" class="item-link close-panel">
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title">Find Us</div>
+                                    </div>
+                                </div>
+                            </a></li>
+                            <li><a data-href="tel:65-62666632" class="item-link close-panel call-us">
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title">Call Us</div>
+                                    </div>
+                                </div>
+                            </a></li>
+                            <!--<li><a data-href="sms:65-62666632" class="item-link close-panel sms-us">-->
+                                <!--<div class="item-content">-->
+                                    <!--<div class="item-inner">-->
+                                        <!--<div class="item-title">SMS Us</div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</a></li>-->
+                            <li><a href="sendusmessage.html" class="item-link close-panel">
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title">Send Us A Message</div>
+                                    </div>
+                                </div>
+                            </a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="newsletter.html" class="item-link close-panel">
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title">Subscribe Our Newsletter</div>
+                                    </div>
+                                </div>
+                            </a></li>
+                            <li><a href="list-view.html" class="item-link close-panel open-browser"
+                                   data-fb="https://www.facebook.com/simsiangchoon/">
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title">Our Facebook Page</div>
+                                    </div>
+                                </div>
+                            </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="views">
+    <div class="view view-main navbar-fixed">
+        <!-- Top Navbar-->
+        <div class="navbar">
+            <div class="navbar-inner">
+                <!-- We have home navbar without left link-->
+                <div class="left">
+                    <!-- Right link contains only icon - additional "icon-only" class-->
+                    <a href="#" class="link open-panel">
+                        <i class="fa fa-bars" aria-hidden="true"></i><span>Home</span>
+                    </a>
+                </div>
+                <div class="right">
+                    <a href="cart.html" class="link icon-only">
+                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
+        <div class="pages">
+            <div data-page="index" class="page" id="index-template">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div id="ecatalogue-sendmail-template" class="popup">
+</div>
+</body>
+</html>
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="lib/framework7.js"></script>
+<script data-main="app" src="lib/require.js"></script>

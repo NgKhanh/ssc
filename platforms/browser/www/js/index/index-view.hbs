@@ -1,0 +1,25 @@
+<div class="toolbar toolbar-bottom no-border">
+    <div class="toolbar-inner one-column ">
+        <div class="copy-right button button-big button-fill">
+            {{{copyright}}}
+        </div>
+    </div>
+</div>
+<div class="page-content">
+    <div class="banner-cover" style="background-image: url('{{ big_banner }}')">
+        <img src="{{ big_banner }}" alt="">
+    </div>
+    <div class="list-block media-list page-list no-margin-top page-list-custom clearfix has-bottom-bar">
+        <ul class="page-list-custom-inner clearfix">
+            {{#pages}}
+            <li>
+                <div class="to-page {{#if tel}} call-us {{else}} link-to {{/if}}" style="background-image: url({{src}})" data-href="{{url}}">
+                    <img src="{{src}}">
+
+                    <!--<div class="item-title">{{title}}</div>-->
+                </div>
+            </li>
+            {{/pages}}
+        </ul>
+    </div>
+</div>

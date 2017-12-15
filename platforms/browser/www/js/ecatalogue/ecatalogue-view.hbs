@@ -1,0 +1,43 @@
+<div data-distance="50" class="page-content infinite-scroll">
+    <div class="swiper-container swiper-cat">
+        <!-- Slides wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            {{#cat}}
+            <div class="swiper-slide parent-cat" index="{{@index}}" cat-id="{{id}}"><img src="{{../domain}}{{image}}"></div>
+            {{/cat}}
+        </div>
+        <!-- Pagination, if required -->
+        <div class="swiper-pagination"></div>
+    </div>
+    <h4 class="cat-name">{{namecat}}</h4>
+    <div class="swiper-container swiper-sub-cat">
+        <!-- Slides wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide parent-cat all" cat-id={{currCatId}}><a href="#">All</a></div>
+            {{#subcat}}
+            <div class="swiper-slide sub-cat" cat-id={{id}}><a href="#">{{name}}</a></div>
+            {{/subcat}}
+        </div>
+        <!-- Pagination, if required -->
+        <div class="swiper-pagination"></div>
+    </div>
+    <div class="list-block  media-list has-arrow-nav page-list-custom">
+        <ul id="product-list" class="page-list-custom-inner">
+            {{#product}}
+            <li>
+                <a href="ecatalogue-detail.html?id={{id}}&namecat={{../namecat}}" class="item-link item-content show-product-detail">
+                    <div class="item-media"><img src="{{../domain}}{{image}}" width="80"/></div>
+                    <div class="item-inner">
+                        <div class="item-title-row">
+                            <div class="item-title">{{title}}</div>
+                        </div>
+                        <div class="item-text">{{{description}}}</div>
+                    </div>
+                </a>
+            </li>
+            {{/product}}
+        </ul>
+    </div>
+</div>

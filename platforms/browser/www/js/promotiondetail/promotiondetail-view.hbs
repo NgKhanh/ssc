@@ -1,0 +1,61 @@
+<div class="page-content item-has-border">
+    <div class="content-block sale-wrap">
+        {{#if promo.expired}}<img src="images/expired.png" alt="">{{/if}}
+        <div class="img-sale">
+            <img src="{{domain}}{{promo.thumb}}" alt="">
+        </div>
+    </div>
+    <div class="content-block content-text">
+        <span>Expired Date: {{expiredate}}</span>
+    </div>
+    <div class="content-block content-text">
+        <span>{{{promo.note}}}</span>
+    </div>
+    <div class="content-block full-width buttons-wrap fixed-bottom">
+        <div class="row">
+            <!--<span class="info-redeem">Please check your redeems inbox!</span>-->
+
+            <!--<div class="col-50">-->
+
+            <!--{{#if promo.redeemed}}-->
+            <!--<a class="button button-big button-fill color-red" href="#"><i class="fa fa-check-circle"-->
+            <!--aria-hidden="true"></i>-->
+            <!--Redeemed!</span></a>-->
+            <!--{{else}}-->
+
+            <!--<a class="button button-big button-fill color-red add-redeem" href="#">-->
+            <!--<i class="fa fa-gift" aria-hidden="true"></i> Redeem</a>-->
+
+            <!--{{/if}}-->
+            <!--</div>-->
+            <!--<div class="col-50"><a class="button button-big button-fill active share" href="#"><i class="fa fa-share-alt"-->
+            <!--aria-hidden="true"></i>-->
+            <!--Share</a></div>-->
+        </div>
+    </div>
+
+</div>
+
+<div class="toolbar toolbar-bottom no-border">
+    <span class="info-redeem">Click on "My Redeems" tab to utilize it later! </span>
+
+    <div class="toolbar-inner one-column ">
+
+        {{#if promo.redeemed}}
+            <span class="button button-big button-fill color-gray" href="#"><i class="fa fa-check-circle"
+                                                                               aria-hidden="true"></i>
+                Redeemed!</span></span>
+        {{else}}
+        {{#if promo.expired}}
+                <span class="button button-big button-fill color-gray" href="#"><i class="fa fa-check-circle"
+                                                                                   aria-hidden="true"></i>
+                        The promotion is expired.</span></span>
+        {{else}}
+        <a class="button button-big button-fill color-red add-redeem" href="#">
+            <i class="fa fa-gift" aria-hidden="true"></i> Redeem</a>
+
+        {{/if}}
+        {{/if}}
+        <!--<a class="button button-big button-fill active dark-blue share" href="#"><i class="fa fa-share-alt" aria-hidden="true"></i> Share</a>-->
+    </div>
+</div>

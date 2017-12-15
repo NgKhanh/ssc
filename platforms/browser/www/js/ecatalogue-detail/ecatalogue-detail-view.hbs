@@ -1,0 +1,33 @@
+<div class="toolbar toolbar-bottom no-border">
+    <div class="toolbar-inner two-column ">
+        {{#unless inCart}}
+        <a class="button button-big button-fill color-red enquiry" href="#">
+            <i class="fa fa-cart-plus" aria-hidden="true"></i> Add to Cart
+        </a>
+        {{else}}
+        <a class="button button-big button-fill color-red remove-from-cart" href="#">
+            <i class="fa fa-minus-circle" aria-hidden="true"></i> Remove
+        </a>
+        {{/unless}}
+
+        <a class="button button-big button-fill active dark-blue share" href="#"><i class="fa fa-share-alt"
+                                                                                    aria-hidden="true"></i> Share</a>
+    </div>
+</div>
+<div class="page-content item-has-border">
+    <div class="content-block-title bg-blue">
+        <div class="block-title-inner"> {{eProd.title}}</div>
+    </div>
+    <div class="content-block content-text">
+        <div class="img-sale">
+            <img src="{{domain}}{{eProd.image}}" alt="">
+        </div>
+    </div>
+    {{#if eProd.description}}
+    <div class="content-block content-text" style="margin-bottom:40px">
+        <div class="context-text-inner">
+            {{{eProd.description}}}
+        </div>
+    </div>
+    {{/if}}
+</div>

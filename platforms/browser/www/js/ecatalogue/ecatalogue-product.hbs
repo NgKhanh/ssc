@@ -1,0 +1,17 @@
+{{#if productlength}}
+{{#product}}
+<li>
+    <a href="ecatalogue-detail.html?id={{id}}&namecat={{../namecat}}" class="item-link item-content show-product-detail">
+        <div class="item-media"><img src="{{../domain}}{{image}}" width="80"/></div>
+        <div class="item-inner">
+            <div class="item-title-row">
+                <div class="item-title">{{title}}</div>
+            </div>
+            <div class="item-text">{{{description}}}</div>
+        </div>
+    </a>
+</li>
+{{/product}}
+{{else}}
+<li class="no-product">There's no product</li>
+{{/if}}

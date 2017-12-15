@@ -1,0 +1,41 @@
+{{#if user}}
+<li><a href="myaccount.html" class="item-link">
+    <div class="item-content">
+        <div class="item-inner">
+            <div class="item-title">My Account</div>
+        </div>
+    </div>
+</a></li>
+<li><a href="myredeem.html" class="item-link">
+    <div class="item-content">
+        <div class="item-inner">
+            <div class="item-title">My Redeems</div>
+        </div>
+    </div>
+</a></li>
+<li>
+    <a href="notification.html" class="item-link">
+        <div class="item-content">
+            <div class="item-inner">
+                <div class="item-title numb-notif-wrap">Member News <span class="numb-notif-outer"><span class="numb-notif">{{numbNotificationUnread}}</span></span>
+                </div>
+            </div>
+        </div>
+    </a>
+</li>
+<li><a href="" class="item-link logout">
+    <div class="item-content">
+        <div class="item-inner">
+            <div class="item-title">Logout</div>
+        </div>
+    </div>
+</a></li>
+{{else}}
+<li><a href="login.html" class="open-login-screen item-link">
+    <div class="item-content">
+        <div class="item-inner">
+            <div class="item-title">Open Login Screen</div>
+        </div>
+    </div>
+</a></li>
+{{/if}}

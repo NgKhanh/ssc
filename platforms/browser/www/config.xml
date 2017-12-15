@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="simsiangchoon.app" version="11.2.3" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>simsiangchoon</name>
+    <description>
+        Founded in 1986, Sim Siang Choon Hardware Pte Ltd is today one of the leading specialist retailers of bathroom,
+        kitchen and home-improvement products in Singapore. Over the years, the company has grown into a major retailer
+        and distributor, holding a portfolio of exclusive distributorship in bathroom and kitchen products numbering 42
+        brands.
+    </description>
+    <author email="support@phonegap.com" href="http://phonegap.com">
+        PhoneGap Team
+    </author>
+    <content src="index.html" />
+    <icon src="resources/android/icon/drawable-xhdpi-icon.png" />
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>Photo Library Access Warning</string>
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="android-minSdkVersion" value="14" />
+    <preference name="SplashScreen" value="screen" />
+    <preference name="SplashScreenDelay" value="3000" />
+    <preference name="ShowSplashScreenSpinner" value="false" />
+</widget>

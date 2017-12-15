@@ -1,0 +1,36 @@
+<div data-distance="50" class="page-content infinite-scroll">
+    <div class="content-block has-count-wrap">
+        <div class="count-wrap">
+            <div class="count-wrap-inner">
+                <span>YOU HAVE</span>
+                <img src="./images/mail.png" alt="mail">
+            </div>
+            <span class="count">{{count}}</span>
+            <span class="last-line">NEW NOTIFICATIONS!</span>
+        </div>
+    </div>
+    <div class="list-block media-list has-arrow-nav">
+        <ul class="notification-list">
+            {{#notification}}
+            <li class="swipeout to-detail notification-swipeout {{#if unread}} notification-new {{/if}}">
+
+                <a href="#" class="item-link item-content swipeout-content">
+                    <div class="item-inner">
+                        <div class="item-title-row">
+                            <div class="item-title">{{title}}</div>
+                        </div>
+                        <div class="item-text">{{{description}}}</div>
+                        <div class="item-time">{{upload_time}}</div>
+                    </div>
+                    {{#if unread}}<span class="new">new</span>{{/if}}
+
+                </a>
+
+                <div class="swipeout-actions-right">
+                    <a href="#" class="swipeout-delete" data-confirm="Are you sure want to delete this item?"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                </div>
+            </li>
+            {{/notification}}
+        </ul>
+    </div>
+</div>

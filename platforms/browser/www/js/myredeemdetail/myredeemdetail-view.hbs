@@ -1,0 +1,22 @@
+<!--<div class="toolbar toolbar-bottom no-border">-->
+    <!--<div class="toolbar-inner one-column ">-->
+        <!--<a class="button button-big button-fill active" href="#"><i class="fa fa-share-alt" aria-hidden="true"></i> Share</a>-->
+    <!--</div>-->
+<!--</div>-->
+<div class="page-content item-has-border">
+    <div class="content-block sale-wrap">
+        {{#if promo.expired}}<img src="images/expired.png" alt="">{{/if}}
+        <div class="img-sale">
+            <img src="{{domain}}{{promo.thumb}}" alt="">
+        </div>
+    </div>
+    <div class="content-block content-text">
+        <span>Expired Date: {{promo.expire}}</span>
+    </div>
+    <div class="content-block content-text">
+        <span>{{promo.note}}</span>
+    </div>
+    <div class="content-block no-padding fixed-bottom button-wrap">
+        <!--<a class="button button-big button-fill active" href="#"><i class="fa fa-share-alt" aria-hidden="true"></i> Share</a>-->
+    </div>
+</div>

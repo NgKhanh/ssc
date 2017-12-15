@@ -1,0 +1,24 @@
+<div class="toolbar toolbar-bottom no-border">
+    <div class="toolbar-inner one-column ">
+        <a href="#" class="button button-big button-fill color-red send-email-enquiry"><i class="fa fa-envelope"
+                                                                                          aria-hidden="true"></i> Send
+            Now</a>
+    </div>
+</div>
+<div class="page-content">
+    <div class="content-block-title bg-blue">
+        <div class="block-title-inner"> You are now sending enquiry</div>
+    </div>
+    <div class="content-block">
+        <form id="enquiryForm">
+            <input name="clientName" {{#if user}}value="{{user.0.name}}"{{/if}} type="text" class="enquiry-input" placeholder="Your name" required/>
+            <input name="clientEmail" type="email" {{#if user}}value="{{user.0.email}}"{{/if}} class="enquiry-input" placeholder="Your email" required/>
+            <input name="clientPhone" type="phone" {{#if user}}value="{{user.0.contact}}"{{/if}} class="enquiry-input" placeholder="Your phone" required/>
+
+            <textarea placeholder="Type your enquiry here..." name="enquiry"></textarea>
+            <input type="reset" value="Reset Form" class="reset-form">
+        </form>
+    </div>
+    <div class="content-block no-padding fixed-bottom button-wrap">
+    </div>
+</div>

@@ -1,0 +1,33 @@
+<div class="toolbar toolbar-bottom no-border">
+    <div class="toolbar-inner one-column ">
+        <a href="#" class="button button-big button-fill color-red send-email"><i class="fa fa-envelope" aria-hidden="true"></i> Submit</a>
+    </div>
+</div>
+<div class="page-content">
+    <div class="banner-cover banner-cover-sm" style="background-image: url('images/banner-1.jpg')">
+        <img src="images/banner-1.jpg" alt="">
+        <span class="banner-text">Simplicity is the ultimate sophistication.</span>
+    </div>
+    <div class="content-block-title color-red main-title">Leave Us A Message</div>
+    <div class="content-block form-wrap">
+        <form id="send-us-message-form">
+            <input name="clientName" {{#if user}}value="{{user.0.name}}"{{/if}} type="text" class="enquiry-input" placeholder="*Your name" required/>
+            <input name="clientEmail" type="email" {{#if user}}value="{{user.0.email}}"{{/if}} class="enquiry-input" placeholder="*Your email" required/>
+            <input name="clientCompany" type="text" {{#if user}}value="{{user.0.company}}"{{/if}} class="enquiry-input" placeholder="Company"/>
+            <input name="clientPhone" type="phone" {{#if user}}value="{{user.0.contact}}"{{/if}} class="enquiry-input" placeholder="Your phone" required/>
+
+            <textarea placeholder="*Type your enquiry here..." name="enquiry"></textarea>
+
+            <input type="reset" value="Reset Form" class="reset-form">
+        </form>
+        <form name="review" id="captcha-form" class="clearfix">
+            <input type="text" placeholder="Security Code*" name="txtInput" id="txtInput">
+            <span id="txtCaptchaDiv"></span>
+            <input type="hidden" id="txtCaptcha" name="txtCaptcha"/>
+
+            <input type="reset" value="Reset Form" class="reset-form">
+        </form>
+    </div>
+    <div class="content-block no-padding fixed-bottom button-wrap">
+    </div>
+</div>

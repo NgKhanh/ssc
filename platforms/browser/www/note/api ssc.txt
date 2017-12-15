@@ -1,0 +1,40 @@
+link \Dropbox\ADVN Team Folder\simsiangchoon.com
+
+
+Register
+/api/account/register      (name, password, email, contact)
+
+Login & User information
+/api/account/login       (email , password )
+
+Get password
+/api/account/forgetpassword      ( email )
+
+get page’s content (about us, find us, contact us) 
+/api/content/page  (id)
+/api/content/option (key)
+
+send email 
+/api/sendmails (sendto , subject , contents) 
+
+
+Get product by id
+/api/product    (id)
+
+
+Get product by category  
+/api/catalogs  (id) 
+/api/catalogs?id=15&limit=10&page=4
+ 
+Get all categories (include parent and sub)
+/api/cataloglist
+
+
+Product load more
+Send enquiry email product
+-	Promotion:
+Get all promotions
+Get promotion by ids
+Let use redeem promotion
+Request user’s promotion
+
